@@ -1,0 +1,167 @@
+/* =====================================
+   GLOBAL
+===================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* =====================================
+   CENTERED APP CONTAINER
+   (desktop style like ChatGPT/Slack)
+===================================== */
+.chat-wrapper {
+  height: 100vh;
+  width: 100vw;   /* centered layout */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  border-left: 1px solid #1f2937;
+  border-right: 1px solid #1f2937;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+.chat-header {
+  padding: 20px 32px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+  color: #22d3ee;
+}
+
+/* =====================================
+   CHAT BODY
+===================================== */
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+/* =====================================
+   MESSAGE ROW
+===================================== */
+.message-row {
+  display: flex;
+  width: 100%;
+}
+
+.message-row.bot {
+  justify-content: flex-start;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+/* =====================================
+   MESSAGE BUBBLES
+===================================== */
+.bubble {
+  max-width: 60%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: #1e293b;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+  transition: 0.2s ease;
+}
+
+.bubble:hover {
+  transform: translateY(-1px);
+}
+
+/* user bubble */
+.message-row.user .bubble {
+  background: linear-gradient(135deg, #14b8a6, #059669);
+}
+
+/* =====================================
+   TEXT
+===================================== */
+.bubble p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =====================================
+   TIMESTAMP
+===================================== */
+.timestamp {
+  display: block;
+  font-size: 11px;
+  opacity: 0.55;
+  margin-top: 6px;
+  text-align: right;
+}
+
+/* =====================================
+   INPUT AREA
+===================================== */
+.chat-input-area {
+  display: flex;
+  gap: 14px;
+  padding: 18px 30px;
+  background: #111827;
+  border-top: 1px solid #1f2937;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #1f2937;
+  color: white;
+}
+
+.chat-input-area input::placeholder {
+  color: #9ca3af;
+}
+
+.chat-input-area button {
+  padding: 0 24px;
+  border-radius: 12px;
+  border: none;
+  background: #14b8a6;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+
+.chat-input-area button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* =====================================
+   SCROLLBAR (desktop nice look)
+===================================== */
+.chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}

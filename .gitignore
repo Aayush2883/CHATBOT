@@ -1,0 +1,36 @@
+### Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json
+
+### Vite / Frontend
+/FRONTEND/node_modules/
+/FRONTEND/dist/
+/FRONTEND/.vite/
+/FRONTEND/build/
+/FRONTEND/.env
+
+### Backend
+/BACKEND/node_modules/
+/BACKEND/dist/
+/BACKEND/.env
+
+### Misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/.cache
+/.idea
+/.vscode
+/.history
+
+### OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
